@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="page-layout">
+        <aside class="sidebar">
+            <h2>Smart City</h2>
+            <ul class="nav-list">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="parking.html">Parking Management</a></li>
+                <li><a href="traffic.html">Toll Monitoring</a></li>
+                <li><a href="search.html">Vehicle Search</a></li>
+                <li><a href="trees.html">AVL/BST Visualization</a></li>
+                <li><a href="graph.html">Graph Visualization</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="page-title">
+                <h1>Parking Management</h1>
+            </div>
+            <div class="cards">
+                <div class="card summary-card">
+                    <h3>Parking Slots</h3>
+                    <p id="parkingStatus">Loading...</p>
+                </div>
+                <div class="card summary-card">
+                    <h3>Vehicle Records</h3>
+                    <p>Dynamic parking records update instantly in the UI.</p>
+                </div>
+            </div>
+            <div class="card" style="margin-top:1.5rem;">
+                <h3>Add Vehicle</h3>
+                <form id="parkingForm" class="form-grid">
+                    <div class="form-group">
+                        <label for="parkNumber">Vehicle Number</label>
+                        <input id="parkNumber" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="parkOwner">Owner Name</label>
+                        <input id="parkOwner" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="parkType">Vehicle Type</label>
+                        <select id="parkType">
+                            <option>Car</option>
+                            <option>Bike</option>
+                            <option>Truck</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="parkEmergency">Emergency Vehicle</label>
+                        <select id="parkEmergency">
+                            <option value="false">No</option>
+                            <option value="true">Yes</option>
+                        </select>
+                    </div>
+                    <button class="button-primary" type="submit">Add Vehicle</button>
+                </form>
+            </div>
+            <div class="card" style="margin-top:1.5rem;">
+                <h3>Remove Vehicle</h3>
+                <form id="removeForm" class="form-grid">
+                    <div class="form-group">
+                        <label for="removeNumber">Vehicle Number</label>
+                        <input id="removeNumber" type="text" required>
+                    </div>
+                    <button class="button-primary" type="submit">Remove Vehicle</button>
+                </form>
+            </div>
+            <div class="card table-card" style="margin-top:1.5rem;">
+                <h3>Parked Vehicles</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Slot</th>
+                            <th>Status</th>
+                            <th>Number</th>
+                            <th>Owner</th>
+                            <th>Type</th>
+                            <th>Parking Fee</th>
+                            <th>Toll Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody id="parkingTableBody"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

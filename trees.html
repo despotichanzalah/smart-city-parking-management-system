@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVL / BST Visualization</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="page-layout">
+        <aside class="sidebar">
+            <h2>Smart City</h2>
+            <ul class="nav-list">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="parking.html">Parking Management</a></li>
+                <li><a href="traffic.html">Toll Monitoring</a></li>
+                <li><a href="search.html">Vehicle Search</a></li>
+                <li><a href="trees.html">AVL/BST Visualization</a></li>
+                <li><a href="graph.html">Graph Visualization</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="page-title">
+                <h1>AVL / BST Visualization</h1>
+            </div>
+            <div class="card summary-card">
+                <h3>BST Inorder</h3>
+                <p id="bstList">Loading tree data...</p>
+            </div>
+            <div class="card summary-card">
+                <h3>AVL Balanced Order</h3>
+                <p id="avlList">Loading tree data...</p>
+            </div>
+            <div class="card table-card" style="margin-top:1.5rem;">
+                <h3>Tree Summary</h3>
+                <p>This view shows the BST and a simulated balanced AVL order from the saved vehicles.</p>
+                <button id="treeRefresh" class="button-primary">Refresh Tree Data</button>
+            </div>
+        </main>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Visualization</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="page-layout">
+        <aside class="sidebar">
+            <h2>Smart City</h2>
+            <ul class="nav-list">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="parking.html">Parking Management</a></li>
+                <li><a href="traffic.html">Toll Monitoring</a></li>
+                <li><a href="search.html">Vehicle Search</a></li>
+                <li><a href="trees.html">AVL/BST Visualization</a></li>
+                <li><a href="graph.html">Graph Visualization</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="page-title">
+                <h1>Graph Visualization</h1>
+            </div>
+            <div class="card" style="margin-bottom:1.5rem;">
+                <h3>City Road Network</h3>
+                <p>The graph connects intersections and models route traversal for BFS/DFS.</p>
+                <ul id="graphList"></ul>
+            </div>
+            <div class="card table-card">
+                <h3>Traversal Controls</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="startNode">Start Node</label>
+                        <select id="startNode">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                    </div>
+                    <button id="runBfs" class="button-primary">Run BFS</button>
+                    <button id="runDfs" class="button-primary">Run DFS</button>
+                </div>
+                <p style="margin-top:1rem; color:#cbd5e1;"><strong>Result:</strong> <span id="graphResult">Select a node and run traversal.</span></p>
+            </div>
+        </main>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
